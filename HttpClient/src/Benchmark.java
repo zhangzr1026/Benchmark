@@ -12,11 +12,11 @@ public class Benchmark {
 	private enum TestType { HTTP, Redis, MySQL, MongoDB };
 	private static final TestType testType = TestType.MySQL; //Permitted Options: HTTP, Redis, MySQL, MongoDB
 	private static final long loopNumBenchmark = 0;
-	private static final long loopNumObj = 100000;
+	private static final long loopNumObj = 100;
 	
 	public static void main(String[] args) {
-		int corePoolSize = 50;
-		int maximumPoolSize = 100;
+		int corePoolSize = 100;
+		int maximumPoolSize = 200;
 		long keepAliveTime = 60;
 		ArrayBlockingQueue queue = new ArrayBlockingQueue(1000000);
 		ThreadPoolExecutor pool = new ThreadPoolExecutor(corePoolSize,
